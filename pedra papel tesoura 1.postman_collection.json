@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "1232101c-0871-4ece-8f67-1de9be7fb45c",
+		"name": "pedra papel tesoura 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27907430"
+	},
+	"item": [
+		{
+			"name": "get rank",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/rank",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post empate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jogador1\": {\n    \"nome\": \"Adrio\",\n    \"jogada\": \"pedra\"\n  },\n  \"jogador2\": {\n    \"nome\": \"Eva\",\n    \"jogada\": \"pedra\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Eva vence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jogador1\": {\n    \"nome\": \"Adrio\",\n    \"jogada\": \"tesoura\"\n  },\n  \"jogador2\": {\n    \"nome\": \"Eva\",\n    \"jogada\": \"pedra\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post faltando jogada",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jogador1\": {\n    \"nome\": \"Adrio\",\n    \"jogada\": \"tesoura\"\n  },\n  \"jogador2\": {\n    \"nome\": \"Eva\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jogada invalida (apenas 1 jogador)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jogador1\": {\n    \"nome\": \"Adrio\",\n    \"jogada\": \"tesoura\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jogada nem pedra, nem papel, nem tesoura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jogador1\": {\n    \"nome\": \"Adrio\",\n    \"jogada\": \"AGUA\"\n  },\n  \"jogador2\": {\n    \"nome\": \"Eva\",\n    \"jogada\": \"pedra\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jogadas\": 6,\n    \"vitorias\": 1,\n    \"empates\": 2,\n    \"derrotas\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jogador/test",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogador errado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jogadas\": 6,\n    \"vitorias\": 1,\n    \"empates\": 2,\n    \"xablau\": 29000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jogador/test",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get jogador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jogador/test",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar jogador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jogadas\": 10,\n    \"vitorias\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jogador/test",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar jogador errado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jogadas\": 10,\n    \"derrotas\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jogador/nao",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"nao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get rank 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/rank",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rank"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
