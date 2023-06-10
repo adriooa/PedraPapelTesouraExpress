@@ -16,4 +16,4 @@ Jogo pedra papel tesoura com tabela de lideres apenas backend com node e express
 
 # Exemplos de testes (requisições) em /images
 
-![exemplo de post](/images/3 post eva vence.png)
+![exemplo de post](images/3\ post\ eva\ vence.png)
